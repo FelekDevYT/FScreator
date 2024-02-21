@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C49013AA-7B64-4A7C-8815-DDFDF0776BC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FScreator</RootNamespace>
+    <AssemblyName>FScreator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutocompleteMenu %283%29">
+      <HintPath>..\..\..\..\Downloads\AutocompleteMenu (3).dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\..\..\..\Downloads\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.5.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Core.1.1.5\lib\net472\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.5.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Shell.1.1.5\lib\net472\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLOCK.Designer.cs">
+      <DependentUpon>BLOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CREATE_BLOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CREATE_BLOCK.Designer.cs">
+      <DependentUpon>CREATE_BLOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CREATE_ITEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CREATE_ITEM.Designer.cs">
+      <DependentUpon>CREATE_ITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CREATE_OBL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CREATE_OBL.Designer.cs">
+      <DependentUpon>CREATE_OBL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CREATE_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CREATE_UI.Designer.cs">
+      <DependentUpon>CREATE_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMATION.Designer.cs">
+      <DependentUpon>INFORMATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMATION_FOR_ITEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMATION_FOR_ITEM.Designer.cs">
+      <DependentUpon>INFORMATION_FOR_ITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMATION_SCRIPTING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMATION_SCRIPTING.Designer.cs">
+      <DependentUpon>INFORMATION_SCRIPTING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JSON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSON.Designer.cs">
+      <DependentUpon>JSON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lua_CODER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lua_CODER.Designer.cs">
+      <DependentUpon>Lua_CODER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAINT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAINT.Designer.cs">
+      <DependentUpon>PAINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XML_coder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XML_coder.Designer.cs">
+      <DependentUpon>XML_coder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BLOCK.resx">
+      <DependentUpon>BLOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREATE_BLOCK.resx">
+      <DependentUpon>CREATE_BLOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREATE_ITEM.resx">
+      <DependentUpon>CREATE_ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREATE_OBL.resx">
+      <DependentUpon>CREATE_OBL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CREATE_UI.resx">
+      <DependentUpon>CREATE_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMATION.resx">
+      <DependentUpon>INFORMATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMATION_FOR_ITEM.resx">
+      <DependentUpon>INFORMATION_FOR_ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMATION_SCRIPTING.resx">
+      <DependentUpon>INFORMATION_SCRIPTING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JSON.resx">
+      <DependentUpon>JSON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lua_CODER.resx">
+      <DependentUpon>Lua_CODER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAINT.resx">
+      <DependentUpon>PAINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="XML_coder.resx">
+      <DependentUpon>XML_coder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FSlogo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FSlogom.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ui.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
