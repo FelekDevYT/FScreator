@@ -77,7 +77,7 @@
             this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
             this.fastColoredTextBox1.IsReplaceMode = false;
-            this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JSON;
+            //this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JSON;
             this.fastColoredTextBox1.LeftBracket = '[';
             this.fastColoredTextBox1.LeftBracket2 = '{';
             this.fastColoredTextBox1.Location = new System.Drawing.Point(0, 24);
