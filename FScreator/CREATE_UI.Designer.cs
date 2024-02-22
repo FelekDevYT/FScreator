@@ -45,14 +45,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Package = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.desctb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.vertb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.creatortb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,9 +60,11 @@
             this.UI = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.settingscb = new System.Windows.Forms.CheckedListBox();
-            this.blockstb = new System.Windows.Forms.RichTextBox();
+            this.blocksrtb = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,20 +134,20 @@
             // createNewToolStripMenuItem
             // 
             this.createNewToolStripMenuItem.Name = "createNewToolStripMenuItem";
-            this.createNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createNewToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.createNewToolStripMenuItem.Text = "Создать новый";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.saveToolStripMenuItem.Text = "Сохранить";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.clearToolStripMenuItem.Text = "Отчистить";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -200,27 +200,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Location = new System.Drawing.Point(8, 45);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(473, 283);
             this.panel2.TabIndex = 22;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
-            this.panel3.Location = new System.Drawing.Point(13, 11);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(41, 38);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
-            this.panel4.Location = new System.Drawing.Point(21, 56);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(41, 38);
-            this.panel4.TabIndex = 1;
             // 
             // button1
             // 
@@ -235,9 +219,9 @@
             // Package
             // 
             this.Package.Controls.Add(this.label6);
-            this.Package.Controls.Add(this.textBox3);
+            this.Package.Controls.Add(this.desctb);
             this.Package.Controls.Add(this.label5);
-            this.Package.Controls.Add(this.textBox2);
+            this.Package.Controls.Add(this.vertb);
             this.Package.Controls.Add(this.label4);
             this.Package.Controls.Add(this.creatortb);
             this.Package.Controls.Add(this.label3);
@@ -258,13 +242,13 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "Description:";
             // 
-            // textBox3
+            // desctb
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 171);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 33;
+            this.desctb.Location = new System.Drawing.Point(0, 171);
+            this.desctb.Multiline = true;
+            this.desctb.Name = "desctb";
+            this.desctb.Size = new System.Drawing.Size(100, 20);
+            this.desctb.TabIndex = 33;
             // 
             // label5
             // 
@@ -275,12 +259,12 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Version:";
             // 
-            // textBox2
+            // vertb
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 31;
+            this.vertb.Location = new System.Drawing.Point(0, 132);
+            this.vertb.Name = "vertb";
+            this.vertb.Size = new System.Drawing.Size(100, 20);
+            this.vertb.TabIndex = 31;
             // 
             // label4
             // 
@@ -334,7 +318,7 @@
             // 
             this.UI.Controls.Add(this.label8);
             this.UI.Controls.Add(this.settingscb);
-            this.UI.Controls.Add(this.blockstb);
+            this.UI.Controls.Add(this.blocksrtb);
             this.UI.Controls.Add(this.label7);
             this.UI.Location = new System.Drawing.Point(487, 45);
             this.UI.Name = "UI";
@@ -362,13 +346,13 @@
             this.settingscb.Size = new System.Drawing.Size(114, 169);
             this.settingscb.TabIndex = 3;
             // 
-            // blockstb
+            // blocksrtb
             // 
-            this.blockstb.Location = new System.Drawing.Point(0, 16);
-            this.blockstb.Name = "blockstb";
-            this.blockstb.Size = new System.Drawing.Size(100, 71);
-            this.blockstb.TabIndex = 2;
-            this.blockstb.Text = "{\n  \"blocks\": [\n    \"block1\",\n    \"block2\"\n  ],\n  \"items\": []\n}";
+            this.blocksrtb.Location = new System.Drawing.Point(0, 16);
+            this.blocksrtb.Name = "blocksrtb";
+            this.blocksrtb.Size = new System.Drawing.Size(100, 71);
+            this.blocksrtb.TabIndex = 2;
+            this.blocksrtb.Text = "{\n  \"blocks\": [\n    \"block1\",\n    \"block2\"\n  ],\n  \"items\": []\n}";
             // 
             // label7
             // 
@@ -390,6 +374,28 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "Важно!! \r\nВводи целые числа вроде 30 или 40";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 56);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(41, 38);
+            this.guna2Panel1.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel2.Location = new System.Drawing.Point(13, 11);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(41, 38);
+            this.guna2Panel2.TabIndex = 2;
+            // 
             // CREATE_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +406,7 @@
             this.Controls.Add(this.UI);
             this.Controls.Add(this.Package);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -409,6 +415,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CREATE_UI";
             this.Text = "FScreator 1.4.2 - Создать UI";
+            this.Load += new System.EventHandler(this.CREATE_UI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -437,16 +444,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem packageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uIToolStripMenuItem;
         private System.Windows.Forms.Panel Package;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox desctb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox vertb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox creatortb;
         private System.Windows.Forms.Label label3;
@@ -454,12 +459,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox idtb;
         private System.Windows.Forms.Panel UI;
-        private System.Windows.Forms.RichTextBox blockstb;
+        private System.Windows.Forms.RichTextBox blocksrtb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolStripMenuItem xmlToolStripMenuItem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckedListBox settingscb;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
