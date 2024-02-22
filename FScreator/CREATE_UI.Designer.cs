@@ -65,6 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.пакFScToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,7 +92,8 @@
             this.packageToolStripMenuItem,
             this.uIToolStripMenuItem,
             this.xmlToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.пакFScToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 16);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(602, 24);
@@ -396,6 +398,13 @@
             this.guna2Panel2.Size = new System.Drawing.Size(41, 38);
             this.guna2Panel2.TabIndex = 2;
             // 
+            // пакFScToolStripMenuItem
+            // 
+            this.пакFScToolStripMenuItem.Name = "пакFScToolStripMenuItem";
+            this.пакFScToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.пакFScToolStripMenuItem.Text = "Пак .FSc";
+            this.пакFScToolStripMenuItem.Click += new System.EventHandler(this.пакFScToolStripMenuItem_Click);
+            // 
             // CREATE_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,5 +477,6 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.ToolStripMenuItem пакFScToolStripMenuItem;
     }
 }

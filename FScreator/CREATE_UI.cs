@@ -193,5 +193,11 @@ namespace FScreator
             // Set the background color of the panel with transparency
             panel2.BackColor = Color.FromArgb(transparency, panel2.BackColor);
         }
+
+        private void пакFScToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PunP PunP = new PunP();
+            PunP.ShowDialog();
+        }
     }
 }
