@@ -17,7 +17,7 @@ namespace FScreator
         public Form1()
         {
             InitializeComponent();
-
+            
             ToolTip t = new ToolTip();
             t.SetToolTip(button1,"для создания блока в проекте напишите в именни проекта");
             t.SetToolTip(button2, "Создать скрипт для блока/предмета");

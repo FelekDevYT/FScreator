@@ -31,8 +31,8 @@ namespace FScreator
         {
 
             if (string.IsNullOrEmpty(textBox1.Text))
-            { 
-            
+            {
+                textBox1.Text = "1";
             }
             else
             {

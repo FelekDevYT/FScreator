@@ -42,9 +42,11 @@
             this.uIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пакFScToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Package = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.пакFScToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -181,6 +181,13 @@
             this.aboutToolStripMenuItem.Text = "О Редакторе";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // пакFScToolStripMenuItem
+            // 
+            this.пакFScToolStripMenuItem.Name = "пакFScToolStripMenuItem";
+            this.пакFScToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.пакFScToolStripMenuItem.Text = "Пак .FSСr";
+            this.пакFScToolStripMenuItem.Click += new System.EventHandler(this.пакFScToolStripMenuItem_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(119, 344);
@@ -207,6 +214,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(473, 283);
             this.panel2.TabIndex = 22;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel2.Location = new System.Drawing.Point(13, 11);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(41, 38);
+            this.guna2Panel2.TabIndex = 2;
             // 
             // button1
             // 
@@ -386,24 +404,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(41, 38);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(29)))), ((int)(((byte)(23)))));
-            this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderThickness = 3;
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.Location = new System.Drawing.Point(13, 11);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(41, 38);
-            this.guna2Panel2.TabIndex = 2;
-            // 
-            // пакFScToolStripMenuItem
-            // 
-            this.пакFScToolStripMenuItem.Name = "пакFScToolStripMenuItem";
-            this.пакFScToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.пакFScToolStripMenuItem.Text = "Пак .FSc";
-            this.пакFScToolStripMenuItem.Click += new System.EventHandler(this.пакFScToolStripMenuItem_Click);
             // 
             // CREATE_UI
             // 
