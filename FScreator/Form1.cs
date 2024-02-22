@@ -14,15 +14,29 @@ namespace FScreator
 {
     public partial class Form1 : Form
     {
+        private string version = "1.4.2";
         public Form1()
         {
             InitializeComponent();
-            
+            if (guna2Button1.Text != "Anonym")
+            {
+                guna2Button2.Show();
+            }
+
+            this.Text = "FScreator " + version + " - Главная";
+            guna2HtmlLabel1.Text = "V" + version;
+
+
             ToolTip t = new ToolTip();
-            t.SetToolTip(button1,"для создания блока в проекте напишите в именни проекта");
+            t.SetToolTip(button1, "для создания блока в проекте напишите имя проекта в главном окне в имени проекта");
             t.SetToolTip(button2, "Создать скрипт для блока/предмета");
             t.SetToolTip(button8, "Создать папку с начальными файлами");
             t.SetToolTip(button5, "для создания предмета в проекте напишите в именни проекта");
+            t.SetToolTip(button11, "для создания любого кода");
+            t.SetToolTip(button7, "для создания интерфейса блоком/предметам");
+            t.SetToolTip(button6, "а почему нет?");
+            t.SetToolTip(button4, "для создания кода для оболочки");
+            t.SetToolTip(button3, "Выход :(");
         }
         public Color color = Color.FromArgb(255, 128, 0);
 
@@ -107,6 +121,15 @@ namespace FScreator
         {
             КУВФСЕ r = new КУВФСЕ();
             r.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if(guna2Button1.Text == "Anonym")
+            {
+                reglog reglog = new reglog();
+                reglog.ShowDialog();
+            }
         }
     }
 }

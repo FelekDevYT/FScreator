@@ -841,7 +841,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CREATE_BLOCK";
-            this.Text = "FScreator 1.4.2 - создать блок";
+            this.Text = "FScreator - создать блок";
             this.Load += new System.EventHandler(this.CREATE_BLOCK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.HITBOX.ResumeLayout(false);

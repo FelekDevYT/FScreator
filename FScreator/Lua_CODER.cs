@@ -116,5 +116,10 @@ namespace FScreator
             INFORMATION_SCRIPTING sd = new INFORMATION_SCRIPTING();
             sd.Show();
         }
+
+        private void Lua_CODER_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

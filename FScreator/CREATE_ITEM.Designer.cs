@@ -319,7 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CREATE_ITEM";
             this.ShowIcon = false;
-            this.Text = "FScreator 1.4.2 - создать предмет";
+            this.Text = "FScreator - создать предмет";
             this.Load += new System.EventHandler(this.CREATE_ITEM_Load);
             this.RGB.ResumeLayout(false);
             this.RGB.PerformLayout();

@@ -288,7 +288,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CREATE_OBL";
             this.ShowIcon = false;
-            this.Text = "FScreator 1.4.2 - create";
+            this.Text = "FScreator - create";
             this.Load += new System.EventHandler(this.CREATE_OBL_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

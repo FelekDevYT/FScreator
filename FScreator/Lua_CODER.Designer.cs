@@ -238,7 +238,7 @@
             // информацияToolStripMenuItem1
             // 
             this.информацияToolStripMenuItem1.Name = "информацияToolStripMenuItem1";
-            this.информацияToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.информацияToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.информацияToolStripMenuItem1.Text = "Информация";
             this.информацияToolStripMenuItem1.Click += new System.EventHandler(this.информацияToolStripMenuItem1_Click);
             // 
@@ -254,7 +254,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Lua_CODER";
             this.ShowIcon = false;
-            this.Text = "FScreator 1.4.2- Lua";
+            this.Text = "FScreator - Lua";
+            this.Load += new System.EventHandler(this.Lua_CODER_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).EndInit();

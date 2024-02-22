@@ -152,17 +152,23 @@
     <Compile Include="PunP.Designer.cs">
       <DependentUpon>PunP.cs</DependentUpon>
     </Compile>
+    <Compile Include="reglog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reglog.Designer.cs">
+      <DependentUpon>reglog.cs</DependentUpon>
+    </Compile>
     <Compile Include="XML_coder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="XML_coder.Designer.cs">
       <DependentUpon>XML_coder.cs</DependentUpon>
     </Compile>
-    <Compile Include="КУВФСЕ.cs">
+    <Compile Include="sint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="КУВФСЕ.Designer.cs">
-      <DependentUpon>КУВФСЕ.cs</DependentUpon>
+    <Compile Include="sint.Designer.cs">
+      <DependentUpon>sint.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BLOCK.resx">
       <DependentUpon>BLOCK.cs</DependentUpon>
@@ -209,15 +215,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="PunP.resx">
       <DependentUpon>PunP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reglog.resx">
+      <DependentUpon>reglog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XML_coder.resx">
       <DependentUpon>XML_coder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="КУВФСЕ.resx">
-      <DependentUpon>КУВФСЕ.cs</DependentUpon>
+    <EmbeddedResource Include="sint.resx">
+      <DependentUpon>sint.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -234,10 +244,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="anonymous.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="discord.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="email.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="FSlogo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="FSlogom.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="relog.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ui.ico">

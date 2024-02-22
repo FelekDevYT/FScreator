@@ -74,10 +74,8 @@
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.fastColoredTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
             this.fastColoredTextBox1.IsReplaceMode = false;
-            //this.fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JSON;
             this.fastColoredTextBox1.LeftBracket = '[';
             this.fastColoredTextBox1.LeftBracket2 = '{';
             this.fastColoredTextBox1.Location = new System.Drawing.Point(0, 24);
@@ -228,7 +226,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JSON";
             this.ShowIcon = false;
-            this.Text = "FScreator 1.4.2 - json ide";
+            this.Text = "FScreator - json ide";
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
