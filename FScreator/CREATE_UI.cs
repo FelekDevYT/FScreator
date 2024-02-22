@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,8 +31,8 @@ namespace FScreator
         {
 
             if (string.IsNullOrEmpty(textBox1.Text))
-            { 
-            
+            {
+                textBox1.Text = "1";
             }
             else
             {
@@ -50,40 +51,37 @@ namespace FScreator
                         ClearDuplicatedPanels();
 
 
-                        // Replace "panel3" with the actual name of your panel
-                        Panel panelToDuplicate = panel3;
+                        // Replace "guna2Panel1" with the actual name of your Guna2Panel
+                        Guna2Panel panelToDuplicate = guna2Panel1;
 
-                        int panelsInFirstRow = Math.Min(10, enteredNumber); // Maximum of 10 panels in the first row
-                        int remainingPanels = enteredNumber - panelsInFirstRow; // Calculate remaining panels
+                        int panelsInFirstRow = Math.Min(10, enteredNumber);
+                        int remainingPanels = enteredNumber - panelsInFirstRow;
 
-                        // Set initial X and Y positions
-                        int initialX = 21; // Adjust the initial X position as needed
-                        int initialY = 56; // Adjust the initial Y position as needed
+                        int initialX = 21;
+                        int initialY = 56;
 
-                        // Create and position panels in the first row
                         for (int i = 0; i < panelsInFirstRow; i++)
                         {
-                            Panel duplicatedPanel = CreateDuplicatedPanel(panelToDuplicate);
+                            Guna2Panel duplicatedPanel = CreateDuplicatedGuna2Panel(panelToDuplicate);
                             duplicatedPanel.Location = new Point(initialX + (i * 45), initialY);
                             this.Controls.Add(duplicatedPanel);
-                            duplicatedPanel.BringToFront(); // Bring the panel to the front
-                            duplicatedPanels.Add(duplicatedPanel); // Add to the list
+                            duplicatedPanel.BringToFront();
+                            duplicatedPanels.Add(duplicatedPanel);
                         }
 
-                        // Create and position remaining panels in subsequent rows
-                        int rows = (int)Math.Ceiling((double)remainingPanels / 10); // Calculate the number of rows needed
-                        int panelsInLastRow = remainingPanels % 10; // Calculate panels in the last row
+                        int rows = (int)Math.Ceiling((double)remainingPanels / 10);
+                        int panelsInLastRow = remainingPanels % 10;
 
                         for (int row = 1; row <= rows; row++)
                         {
                             int panelsInCurrentRow = (row == rows) ? panelsInLastRow : 10;
                             for (int i = 0; i < panelsInCurrentRow; i++)
                             {
-                                Panel duplicatedPanel = CreateDuplicatedPanel(panelToDuplicate);
+                                Guna2Panel duplicatedPanel = CreateDuplicatedGuna2Panel(panelToDuplicate);
                                 duplicatedPanel.Location = new Point(initialX + (i * 45), initialY + (row * 45));
                                 this.Controls.Add(duplicatedPanel);
-                                duplicatedPanel.BringToFront(); // Bring the panel to the front
-                                duplicatedPanels.Add(duplicatedPanel); // Add to the list
+                                duplicatedPanel.BringToFront();
+                                duplicatedPanels.Add(duplicatedPanel);
                             }
                         }
                     }
@@ -117,12 +115,14 @@ namespace FScreator
 
 
         // Method to create a duplicated panel with the same properties as the original panel
-        private Panel CreateDuplicatedPanel(Panel originalPanel)
+        private Guna2Panel CreateDuplicatedGuna2Panel(Guna2Panel originalPanel)
         {
-            Panel duplicatedPanel = new Panel();
+            Guna2Panel duplicatedPanel = new Guna2Panel();
             duplicatedPanel.Size = originalPanel.Size;
             duplicatedPanel.BackColor = originalPanel.BackColor;
-            // Copy other properties as needed
+            duplicatedPanel.BorderColor = originalPanel.BorderColor; // Copy the border color
+            duplicatedPanel.BorderThickness = originalPanel.BorderThickness; // Copy the border thickness
+                                                                             // Copy other properties as needed
             return duplicatedPanel;
         }
 
@@ -140,6 +140,14 @@ namespace FScreator
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
+            idtb.Text = "";
+            creatortb.Text = "";
+            titletb.Text = "";
+            vertb.Text = "";
+            desctb.Text = "";
+            blocksrtb.Text = "{\r\n  \"blocks\": [\r\n    \"block1\",\r\n    \"block2\"\r\n  ],\r\n  \"items\": []\r\n}";
+            settingscb.SetItemChecked(settingscb.Items.IndexOf("padding"), false);
+            settingscb.SetItemChecked(settingscb.Items.IndexOf("scrollable"), false);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -175,6 +183,21 @@ namespace FScreator
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CREATE_UI_Load(object sender, EventArgs e)
+        {
+            // Set the initial transparency level (alpha value)
+            int transparency = 255; // You can adjust this value (0 to 255)
+
+            // Set the background color of the panel with transparency
+            panel2.BackColor = Color.FromArgb(transparency, panel2.BackColor);
+        }
+
+        private void пакFScToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PunP PunP = new PunP();
+            PunP.ShowDialog();
         }
     }
 }

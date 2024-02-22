@@ -98,5 +98,45 @@ namespace FScreator
                 MessageBox.Show("Ошибка:файл сохранения не найден!", "Ошибка:файл сохранения не найден!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
+        }
+
+        private void visualBasicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.VB;
+        }
+
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
+        }
+
+        private void xMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.XML;
+        }
+
+        private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.SQL;
+        }
+
+        private void pHPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.PHP;
+        }
+
+        private void javaScriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JS;
+        }
+
+        private void luaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
+        }
     }
 }
