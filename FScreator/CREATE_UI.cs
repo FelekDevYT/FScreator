@@ -32,7 +32,7 @@ namespace FScreator
 
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                textBox1.Text = "1";
+                //textBox1.Text = "1";
             }
             else
             {
@@ -48,6 +48,12 @@ namespace FScreator
                     }
                     else
                     {
+                        if (enteredNumber >= 61 && enteredNumber <= 69)
+                        {
+                            textBox1.Text = "60";
+                            enteredNumber = 60;
+                        }
+
                         ClearDuplicatedPanels();
 
 
