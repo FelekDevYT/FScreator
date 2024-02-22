@@ -1,34 +1,69 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace FScreator
 {
-    public partial class JSON : Form
+    public partial class КУВФСЕ : Form
     {
-        public JSON()
+        public КУВФСЕ()
         {
             InitializeComponent();
         }
         String openfile;
-
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.ShowDialog() == DialogResult.Cancel)
-            {
-                return;
-            }
-            String filename = openFileDialog1.FileName;
-            fastColoredTextBox1.Text = File.ReadAllText(filename);
-            openfile = openFileDialog1.FileName;
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.CSharp;
         }
+
+        private void visualBasicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.VB;
+        }
+
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.HTML;
+        }
+
+        private void xMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.XML;
+        }
+
+        private void sQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.SQL;
+        }
+
+        private void pHPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.PHP;
+        }
+
+        private void javaScriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.JS;
+        }
+
+        private void luaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua;
+        }
+
+        private void dshtpfnmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fastColoredTextBox1.Cut();
+        }
+
         private void копироватьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fastColoredTextBox1.Copy();
@@ -39,9 +74,9 @@ namespace FScreator
             fastColoredTextBox1.Paste();
         }
 
-        private void вырезатьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fastColoredTextBox1.Cut();
+            fastColoredTextBox1.Clear();
         }
 
         private void выделитьВсеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,9 +84,16 @@ namespace FScreator
             fastColoredTextBox1.SelectAll();
         }
 
-        private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fastColoredTextBox1.Clear();
+            openFileDialog1.Filter = "Lua files(*.lua)|*.lua|All files(*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+            {
+                return;
+            }
+            String filename = openFileDialog1.FileName;
+            fastColoredTextBox1.Text = File.ReadAllText(filename);
+            openfile = openFileDialog1.FileName;
         }
 
         private void выйтиToolStripMenuItem_Click(object sender, EventArgs e)

@@ -102,5 +102,11 @@ namespace FScreator
             XML_coder xm = new XML_coder();
             xm.ShowDialog();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            КУВФСЕ r = new КУВФСЕ();
+            r.ShowDialog();
+        }
     }
 }

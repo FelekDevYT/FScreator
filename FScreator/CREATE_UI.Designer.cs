@@ -66,6 +66,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кнопкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изображениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ползунокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обычныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.полеВводаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обычноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.многострочноеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,7 +94,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mToolStripMenuItem,
             this.fileToolStripMenuItem,
@@ -93,10 +102,12 @@
             this.uIToolStripMenuItem,
             this.xmlToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.пакFScToolStripMenuItem});
+            this.пакFScToolStripMenuItem,
+            this.добавитьToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 16);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(602, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(503, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -405,6 +416,71 @@
             this.guna2Panel1.Size = new System.Drawing.Size(41, 38);
             this.guna2Panel1.TabIndex = 1;
             // 
+            // добавитьToolStripMenuItem
+            // 
+            this.добавитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ползунокToolStripMenuItem,
+            this.toolStripMenuItem,
+            this.изображениеToolStripMenuItem,
+            this.кнопкаToolStripMenuItem,
+            this.полеВводаToolStripMenuItem});
+            this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.добавитьToolStripMenuItem.Text = "Добавить";
+            // 
+            // кнопкаToolStripMenuItem
+            // 
+            this.кнопкаToolStripMenuItem.Name = "кнопкаToolStripMenuItem";
+            this.кнопкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.кнопкаToolStripMenuItem.Text = "Кнопка";
+            // 
+            // изображениеToolStripMenuItem
+            // 
+            this.изображениеToolStripMenuItem.Name = "изображениеToolStripMenuItem";
+            this.изображениеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изображениеToolStripMenuItem.Text = "Изображение";
+            // 
+            // ползунокToolStripMenuItem
+            // 
+            this.ползунокToolStripMenuItem.Name = "ползунокToolStripMenuItem";
+            this.ползунокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ползунокToolStripMenuItem.Text = "Ползунок";
+            // 
+            // toolStripMenuItem
+            // 
+            this.toolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обычныйToolStripMenuItem});
+            this.toolStripMenuItem.Name = "toolStripMenuItem";
+            this.toolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem.Text = "Текст";
+            // 
+            // обычныйToolStripMenuItem
+            // 
+            this.обычныйToolStripMenuItem.Name = "обычныйToolStripMenuItem";
+            this.обычныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обычныйToolStripMenuItem.Text = "Обычный";
+            // 
+            // полеВводаToolStripMenuItem
+            // 
+            this.полеВводаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обычноеToolStripMenuItem,
+            this.многострочноеToolStripMenuItem});
+            this.полеВводаToolStripMenuItem.Name = "полеВводаToolStripMenuItem";
+            this.полеВводаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.полеВводаToolStripMenuItem.Text = "Поле Ввода";
+            // 
+            // обычноеToolStripMenuItem
+            // 
+            this.обычноеToolStripMenuItem.Name = "обычноеToolStripMenuItem";
+            this.обычноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обычноеToolStripMenuItem.Text = "Обычное";
+            // 
+            // многострочноеToolStripMenuItem
+            // 
+            this.многострочноеToolStripMenuItem.Name = "многострочноеToolStripMenuItem";
+            this.многострочноеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.многострочноеToolStripMenuItem.Text = "Многострочное";
+            // 
             // CREATE_UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,5 +554,14 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.ToolStripMenuItem пакFScToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem изображениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem кнопкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ползунокToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обычныйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem полеВводаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обычноеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem многострочноеToolStripMenuItem;
     }
 }
