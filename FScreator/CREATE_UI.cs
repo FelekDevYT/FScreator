@@ -306,7 +306,7 @@ namespace FScreator
 
                     inputForm.Controls.Add(textBox);
                     inputForm.Controls.Add(okButton);
-                    inputForm.BackColor = Color.FromArgb(255,28,0) ;
+                    inputForm.BackColor = Color.FromArgb(255,128,0) ;
 
                     inputForm.ShowDialog();
 
