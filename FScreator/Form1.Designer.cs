@@ -251,6 +251,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(30, 31);
             this.guna2Button2.TabIndex = 26;
             this.guna2Button2.Visible = false;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // Form1
             // 

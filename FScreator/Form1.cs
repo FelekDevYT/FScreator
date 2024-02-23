@@ -18,6 +18,7 @@ namespace FScreator
         public Form1()
         {
             InitializeComponent();
+            checkif();
             if (guna2Button1.Text != "Anonym")
             {
                 guna2Button2.Show();
@@ -129,7 +130,48 @@ namespace FScreator
             {
                 reglog reglog = new reglog();
                 reglog.ShowDialog();
+                checkif();
             }
+        }
+
+        private void checkif()
+        {
+            try
+            {
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "txts", "user.txt");
+
+                // Проверяем существование файла
+                if (File.Exists(filePath))
+                {
+                    // Читаем текст из файла
+                    string fileContent = File.ReadAllText(filePath);
+
+                    if (fileContent == "")
+                    {
+                        guna2Button2.Hide();
+                    }
+                    else
+                    {
+                        guna2Button1.Text = fileContent;
+                        guna2Button2.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Файл не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            reglog reglog = new reglog();
+            reglog.ShowDialog();
+            checkif();
         }
     }
 }
