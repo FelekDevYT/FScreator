@@ -1,4 +1,4 @@
-﻿using Guna.UI2.WinForms;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -306,6 +306,7 @@ namespace FScreator
 
                     inputForm.Controls.Add(textBox);
                     inputForm.Controls.Add(okButton);
+                    inputForm.BackColor = Color.FromArgb(255,28,0) ;
 
                     inputForm.ShowDialog();
 
