@@ -136,7 +136,7 @@
             this.guna2Button1.Image = global::FScreator.Properties.Resources.discord;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(-3, 0);
             this.guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button1.Location = new System.Drawing.Point(55, 169);
+            this.guna2Button1.Location = new System.Drawing.Point(64, 169);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(193, 36);
             this.guna2Button1.TabIndex = 22;

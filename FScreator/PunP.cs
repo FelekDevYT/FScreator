@@ -9,6 +9,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace FScreator
@@ -24,10 +25,21 @@ namespace FScreator
         {
             try
             {
+                string filePath2 = Path.Combine(Directory.GetCurrentDirectory(), "txts", "user.txt");
+
+                // Читаем текст из файла
+                string fileContent = File.ReadAllText(filePath2);
+
+                string filePath3 = Path.Combine(Directory.GetCurrentDirectory(), "txts", "userdata.txt");
+
+                // Читаем текст из файла
+                string fileContent2 = File.ReadAllText(filePath3);
+
+
                 // Create a package and add some data
                 MyPackage package = new MyPackage();
-                package.Data.Add("Item 1");
-                package.Data.Add("Item 2");
+                package.Data.Add(fileContent);
+                package.Data.Add(fileContent2);
 
                 // Get the path from the user
                 string filePath = GetFilePath("Save Package");
