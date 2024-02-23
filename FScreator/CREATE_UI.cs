@@ -17,9 +17,14 @@ namespace FScreator
         private int maxSlotsprog = 70;
         private int maxSlots = 10;
         private List<Panel> duplicatedPanels = new List<Panel>();
+        private bool isDragging = false;
+        private Point offset;
+        private List<Button> createdButtons = new List<Button>();
+
         public CREATE_UI()
         {
             InitializeComponent();
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,6 +159,8 @@ namespace FScreator
             blocksrtb.Text = "{\r\n  \"blocks\": [\r\n    \"block1\",\r\n    \"block2\"\r\n  ],\r\n  \"items\": []\r\n}";
             settingscb.SetItemChecked(settingscb.Items.IndexOf("padding"), false);
             settingscb.SetItemChecked(settingscb.Items.IndexOf("scrollable"), false);
+
+            RemoveAllButtons();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -204,6 +211,127 @@ namespace FScreator
         {
             PunP PunP = new PunP();
             PunP.ShowDialog();
+        }
+
+        private void кнопкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Создаем новую кнопку
+            Button newButton = new Button();
+            newButton.Text = "Новая кнопка";
+            newButton.AutoSize = true;
+            newButton.AutoSizeMode = AutoSizeMode.GrowOnly;
+
+            // Добавляем контекстное меню к кнопке
+            ContextMenuStrip contextMenu = new ContextMenuStrip();
+            ToolStripMenuItem changeTextMenuItem = new ToolStripMenuItem("Изменить текст");
+            changeTextMenuItem.Click += (s, args) => ChangeTextMenuItem_Click(newButton, args);
+            contextMenu.Items.Add(changeTextMenuItem);
+
+            newButton.ContextMenuStrip = contextMenu;
+
+            // Добавляем обработчик MouseClick
+            newButton.MouseClick += (s, args) => DynamicButton_MouseClick(newButton, args);
+
+            // Добавляем обработчики для перемещения кнопки
+            newButton.MouseDown += (s, args) => { isDragging = true; offset = args.Location; };
+            newButton.MouseMove += DynamicButton_MouseMove;
+            newButton.MouseUp += (s, args) => { isDragging = false; };
+
+            // Добавляем новую кнопку на форму
+            this.Controls.Add(newButton);
+
+            // Перемещаем новую кнопку вперед
+            newButton.BringToFront();
+
+            // Добавляем созданную кнопку в список
+            createdButtons.Add(newButton);
+        }
+
+        private void DynamicButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                // Показываем контекстное меню только при нажатии правой кнопкой мыши
+                Button clickedButton = sender as Button;
+
+                if (clickedButton != null)
+                {
+                    // Позиция относительно экрана
+                    Point screenPosition = clickedButton.PointToScreen(e.Location);
+
+                    // Позиция относительно формы
+                    Point formPosition = this.PointToClient(screenPosition);
+
+                    clickedButton.ContextMenuStrip.Show(this, formPosition);
+                }
+            }
+        }
+
+        private void DynamicButton_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Button draggedButton = sender as Button;
+                if (draggedButton != null)
+                {
+                    // Получаем новую позицию кнопки относительно формы
+                    Point newLocation = this.PointToClient(Control.MousePosition);
+
+                    // Вычисляем смещение
+                    newLocation.Offset(-offset.X, -offset.Y);
+
+                    // Устанавливаем новую позицию для кнопки
+                    draggedButton.Location = newLocation;
+                }
+            }
+        }
+
+        private void ChangeTextMenuItem_Click(object sender, EventArgs e)
+        {
+            if (sender is Button clickedButton)
+            {
+                // Отображаем форму с TextBox для изменения текста кнопки
+                using (Form inputForm = new Form())
+                {
+                    TextBox textBox = new TextBox();
+                    textBox.Text = clickedButton.Text;
+
+                    Button okButton = new Button();
+                    okButton.Text = "ОК";
+                    okButton.Click += (s, args) => { inputForm.Close(); };
+
+                    // Устанавливаем расположение элементов
+                    textBox.Location = new Point(10, 10);
+                    okButton.Location = new Point(10, 40);
+
+                    inputForm.Controls.Add(textBox);
+                    inputForm.Controls.Add(okButton);
+
+                    inputForm.ShowDialog();
+
+                    // Присваиваем новый текст кнопке
+                    clickedButton.Text = textBox.Text;
+
+                    // Устанавливаем AutoSize и AutoSizeMode для кнопки
+                    clickedButton.AutoSize = true;
+                    clickedButton.AutoSizeMode = AutoSizeMode.GrowOnly;
+
+                    // Перемещаем кнопку вперед после изменения текста
+                    clickedButton.BringToFront();
+                }
+            }
+        }
+
+        private void RemoveAllButtons()
+        {
+            // Remove all buttons from the form's Controls collection
+            foreach (Button button in createdButtons)
+            {
+                this.Controls.Remove(button);
+            }
+
+            // Clear the list of created buttons
+            createdButtons.Clear();
         }
     }
 }

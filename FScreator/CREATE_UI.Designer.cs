@@ -107,7 +107,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 16);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(503, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -214,7 +214,7 @@
             // ползунокToolStripMenuItem
             // 
             this.ползунокToolStripMenuItem.Name = "ползунокToolStripMenuItem";
-            this.ползунокToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.ползунокToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ползунокToolStripMenuItem.Text = "Ползунок";
             // 
             // toolStripMenuItem
@@ -222,7 +222,7 @@
             this.toolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.обычныйToolStripMenuItem});
             this.toolStripMenuItem.Name = "toolStripMenuItem";
-            this.toolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.toolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem.Text = "Текст";
             // 
             // обычныйToolStripMenuItem
@@ -234,14 +234,15 @@
             // изображениеToolStripMenuItem
             // 
             this.изображениеToolStripMenuItem.Name = "изображениеToolStripMenuItem";
-            this.изображениеToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.изображениеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изображениеToolStripMenuItem.Text = "Изображение";
             // 
             // кнопкаToolStripMenuItem
             // 
             this.кнопкаToolStripMenuItem.Name = "кнопкаToolStripMenuItem";
-            this.кнопкаToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.кнопкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.кнопкаToolStripMenuItem.Text = "Кнопка";
+            this.кнопкаToolStripMenuItem.Click += new System.EventHandler(this.кнопкаToolStripMenuItem_Click);
             // 
             // полеВводаToolStripMenuItem
             // 
@@ -249,7 +250,7 @@
             this.обычноеToolStripMenuItem,
             this.многострочноеToolStripMenuItem});
             this.полеВводаToolStripMenuItem.Name = "полеВводаToolStripMenuItem";
-            this.полеВводаToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.полеВводаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.полеВводаToolStripMenuItem.Text = "Поле Ввода";
             // 
             // обычноеToolStripMenuItem
