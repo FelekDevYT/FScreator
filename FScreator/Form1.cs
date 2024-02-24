@@ -173,5 +173,11 @@ namespace FScreator
             reglog.ShowDialog();
             checkif();
         }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            _3dmodel Dmodel = new _3dmodel();
+            Dmodel.ShowDialog();
+        }
     }
 }
