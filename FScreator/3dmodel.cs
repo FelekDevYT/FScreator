@@ -351,7 +351,7 @@ namespace FScreator
                 if (int.TryParse(textBox5.Text, out R2))
                 {
                     // Create a rotation transformation
-                    var rotation = new RotateTransform3D(new AxisAngleRotation3D(new Vector3D(0, 0, 1), R2));
+                    var rotation = new RotateTransform3D(new AxisAngleRotation3D(new Vector3D(1, 0, 0), R2));
 
                     // Apply the rotation to the cube
                     cubeToAdjust.Transform = rotation;
