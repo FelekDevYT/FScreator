@@ -31,6 +31,7 @@ namespace FScreator
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button;
         int X1;
         int Y1;
@@ -43,6 +44,7 @@ namespace FScreator
         private System.Windows.Forms.TextBox heightTextBox;
         private int currentCubeIndex = 0;
         private int totalCubes => cubes.Count;
+        private string Name2;
 
 
         public _3dmodel()
@@ -132,6 +134,7 @@ namespace FScreator
             textBox3 = new System.Windows.Forms.TextBox();
             textBox4 = new System.Windows.Forms.TextBox();
             textBox5 = new System.Windows.Forms.TextBox();
+            textBox6 = new System.Windows.Forms.TextBox();
 
             // Set properties for the textboxes
             textBox1.Location = new System.Drawing.Point(10, 30);
@@ -152,6 +155,7 @@ namespace FScreator
             textBox3.Text = "0";
             textBox4.Text = "0";
             textBox5.Text = "0";
+            textBox6.Text = "Name Here";
 
             // Create a Reset button
             System.Windows.Forms.Button resetButton = new System.Windows.Forms.Button();
@@ -207,6 +211,7 @@ namespace FScreator
             BuildButton.Click += BuildButton_Click;
 
             textBox5.Location = new System.Drawing.Point(10, heightTextBox.Bottom + 10);
+            textBox6.Location = new System.Drawing.Point(10, BuildButton.Bottom + 10);
 
             // Add the TrackBar and textboxes to the panel
             sliderPanel.Controls.Add(textBox1);
@@ -214,6 +219,7 @@ namespace FScreator
             sliderPanel.Controls.Add(textBox3);
             sliderPanel.Controls.Add(textBox4);
             sliderPanel.Controls.Add(textBox5);
+            sliderPanel.Controls.Add(textBox6);
 
             // Add the textboxes to the panel
             sliderPanel.Controls.Add(lengthTextBox);
@@ -265,6 +271,7 @@ namespace FScreator
             textBox3.Text = "0";
             textBox4.Text = "0";
             textBox5.Text = "0";
+            textBox6.Text = "Name Here";
             lengthTextBox.Text = "6";
             widthTextBox.Text = "0.5";
             heightTextBox.Text = "6";
@@ -283,7 +290,7 @@ namespace FScreator
             // Create a new cube with default properties
             var newCube = new BoxVisual3D()
             {
-                Center = new Point3D(0, -2.7, 0),
+                Center = new Point3D(0, 0, 0),
                 Length = 6,
                 Width = 0.5,
                 Height = 6,
@@ -517,21 +524,22 @@ namespace FScreator
 
         private string GenerateJson()
         {
+            Name2 = textBox6.Text;   // Да я задаю имя файлу через переменную а что такого?
+
             // Create a list to store cube information
-            List<List<object>> aabbsList = new List<List<object>>();
+            List<List<double>> aabbsList = new List<List<double>>();
 
             // Iterate through each cube and add its information to the list
             foreach (var cube in cubes)
             {
-                // Exclude cube2 from the JSON data
+                // Exclude bancube from the JSON data
                 if (cube != bancube)
                 {
-                    var aabb = new List<object>
-            {
+                    var aabb = new List<double>
+            {                                                  //  НЕ ПОПРОВЛЯТЬ СЛОМАЕШЬ!!!!!!!!!!!!!!
                 cube.Center.X, cube.Center.Y, cube.Center.Z,
-                cube.Width, cube.Height, cube.Length,
-                "def", "def", "def", "def", "def", "def"
-            };
+                cube.Width, cube.Height, cube.Length
+            };                                                  //  НЕ ПОПРОВЛЯТЬ СЛОМАЕШЬ!!!!!!!!!!!!!!
 
                     aabbsList.Add(aabb);
                 }
@@ -540,7 +548,6 @@ namespace FScreator
             // Create the JSON structure
             var jsonData = new
             {
-                texture = "def",
                 model = "custom",
                 modelPrimitives = new
                 {
@@ -552,12 +559,12 @@ namespace FScreator
             string currentDirectory = Environment.CurrentDirectory;
 
             // Combine the current directory with the file name
-            string filePath = Path.Combine(currentDirectory, "output.json");
+            string filePath = Path.Combine(currentDirectory, Name2+".json");
 
             try
             {
-                // Write the JSON data to the file
-                File.WriteAllText(filePath, $"\"aabbs\": [{string.Join(", ", aabbsList.Select(aabb => $"[{string.Join(", ", aabb)}]"))}]");
+                // Write the JSON data to the file with new lines, spaces, and commas
+                File.WriteAllText(filePath, "{\n  \"texture\": \"def\",\n  \"model\": \"custom\",\n  \"model-primitives\": {\n    \"aabbs\": [\n" + string.Join(",\n", aabbsList.Select(aabb => $"      [ {string.Join(", ", aabb)} ]")) + "\n    ]\n  }\n}");
 
                 // Provide feedback to the user
                 MessageBox.Show($"JSON file created successfully at {filePath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
