@@ -10,6 +10,10 @@ using System.IO;
 using System.Windows.Controls;
 using System.Drawing.Text;
 using System.Collections.Generic;
+using System.Windows.Input;
+using System.Xml;
+using Newtonsoft.Json;
+using System.Linq;
 
 namespace FScreator
 {
@@ -19,6 +23,7 @@ namespace FScreator
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private BoxVisual3D cubeToAdjust; // Declare at the class level
         private BoxVisual3D startcube; // Declare at the class level
+        private BoxVisual3D bancube; // Declare at the class level
         private System.Windows.Forms.Panel sliderPanel;
         private TrackBar slider1;
         private System.Windows.Forms.TextBox textBox1;
@@ -36,6 +41,8 @@ namespace FScreator
         private System.Windows.Forms.TextBox lengthTextBox;
         private System.Windows.Forms.TextBox widthTextBox;
         private System.Windows.Forms.TextBox heightTextBox;
+        private int currentCubeIndex = 0;
+        private int totalCubes => cubes.Count;
 
 
         public _3dmodel()
@@ -87,6 +94,7 @@ namespace FScreator
 
             cubeToAdjust = cube;
             startcube = cube;
+            bancube = cube2;
 
             // Add a directional light
             helixViewport.Children.Add(new DefaultLights());
@@ -181,6 +189,23 @@ namespace FScreator
             widthTextBox.Text = "0.5";
             heightTextBox.Text = "6";
 
+            // Create two navigation buttons
+            System.Windows.Forms.Button prevButton = new System.Windows.Forms.Button();
+            prevButton.Text = "Previous";
+            prevButton.Location = new Point(10, 430);
+            prevButton.Click += PrevButton_Click;
+
+            System.Windows.Forms.Button nextButton = new System.Windows.Forms.Button();
+            nextButton.Text = "Next";
+            nextButton.Location = new Point(10, 400);
+            nextButton.Click += NextButton_Click;
+
+            // Create a Build button
+            System.Windows.Forms.Button BuildButton = new System.Windows.Forms.Button();
+            BuildButton.Text = "Build";
+            BuildButton.Location = new Point(10, nextButton.Bottom + 50);  // Adjust the location as needed
+            BuildButton.Click += BuildButton_Click;
+
             textBox5.Location = new System.Drawing.Point(10, heightTextBox.Bottom + 10);
 
             // Add the TrackBar and textboxes to the panel
@@ -200,6 +225,11 @@ namespace FScreator
 
             // Add the Create button to the panel
             sliderPanel.Controls.Add(createButton);
+
+            // Add the navigation buttons to the panel
+            sliderPanel.Controls.Add(prevButton);
+            sliderPanel.Controls.Add(nextButton);
+            sliderPanel.Controls.Add(BuildButton);
 
             // Add the Delete button to the panel
             sliderPanel.Controls.Add(deleteButton);
@@ -243,6 +273,11 @@ namespace FScreator
             slider1.Value = 0;
         }
 
+        private void BuildButton_Click(object sender, EventArgs e)
+        {
+            GenerateJson();
+        }
+
         private void CreateButton_Click(object sender, EventArgs e)
         {
             // Create a new cube with default properties
@@ -263,6 +298,12 @@ namespace FScreator
 
             // Set the new cube as the cubeToAdjust
             cubeToAdjust = newCube;
+
+            // Set the currentCubeIndex to the index of the new cube
+            currentCubeIndex = cubes.Count - 1;
+
+            // Update textboxes based on the new cube
+            UpdateTextBoxesFromCurrentCube();
 
             // Redraw the 3D scene
             helixViewport.InvalidateVisual();
@@ -425,6 +466,110 @@ namespace FScreator
                 cubeToAdjust.Height = height;
                 helixViewport.InvalidateVisual();
             }
+        }
+
+        private void PrevButton_Click(object sender, EventArgs e)
+        {
+            if (totalCubes > 0)
+            {
+                currentCubeIndex = (currentCubeIndex - 1 + totalCubes) % totalCubes;
+                cubeToAdjust = cubes[currentCubeIndex];
+                UpdateTextBoxesFromCurrentCube();
+            }
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            if (totalCubes > 0)
+            {
+                currentCubeIndex = (currentCubeIndex + 1) % totalCubes;
+                cubeToAdjust = cubes[currentCubeIndex];
+                UpdateTextBoxesFromCurrentCube();
+            }
+        }
+
+        private void UpdateTextBoxesFromCurrentCube()
+        {
+            // Update the textboxes with the properties of the current cube
+            textBox1.Text = cubeToAdjust.Center.Y.ToString();
+            textBox2.Text = cubeToAdjust.Center.Z.ToString();
+            textBox3.Text = cubeToAdjust.Center.X.ToString();
+
+            // Check if the cubeToAdjust has a RotateTransform3D
+            if (cubeToAdjust.Transform is RotateTransform3D rotateTransform)
+            {
+                // Update rotation-related textboxes
+                textBox4.Text = ((AxisAngleRotation3D)rotateTransform.Rotation).Angle.ToString();
+                textBox5.Text = ((AxisAngleRotation3D)rotateTransform.Rotation).Axis.Y.ToString();
+            }
+            else
+            {
+                // Handle the case when the transformation is not a RotateTransform3D
+                textBox4.Text = "0";
+                textBox5.Text = "0";
+            }
+
+            lengthTextBox.Text = cubeToAdjust.Length.ToString();
+            widthTextBox.Text = cubeToAdjust.Width.ToString();
+            heightTextBox.Text = cubeToAdjust.Height.ToString();
+            slider1.Value = (int)(cubeToAdjust.Center.Y * 10); // Adjust the slider value if needed
+        }
+
+        private string GenerateJson()
+        {
+            // Create a list to store cube information
+            List<List<object>> aabbsList = new List<List<object>>();
+
+            // Iterate through each cube and add its information to the list
+            foreach (var cube in cubes)
+            {
+                // Exclude cube2 from the JSON data
+                if (cube != bancube)
+                {
+                    var aabb = new List<object>
+            {
+                cube.Center.X, cube.Center.Y, cube.Center.Z,
+                cube.Width, cube.Height, cube.Length,
+                "def", "def", "def", "def", "def", "def"
+            };
+
+                    aabbsList.Add(aabb);
+                }
+            }
+
+            // Create the JSON structure
+            var jsonData = new
+            {
+                texture = "def",
+                model = "custom",
+                modelPrimitives = new
+                {
+                    aabbs = aabbsList
+                }
+            };
+
+            // Get the current directory
+            string currentDirectory = Environment.CurrentDirectory;
+
+            // Combine the current directory with the file name
+            string filePath = Path.Combine(currentDirectory, "output.json");
+
+            try
+            {
+                // Write the JSON data to the file
+                File.WriteAllText(filePath, $"\"aabbs\": [{string.Join(", ", aabbsList.Select(aabb => $"[{string.Join(", ", aabb)}]"))}]");
+
+                // Provide feedback to the user
+                MessageBox.Show($"JSON file created successfully at {filePath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., file IO errors)
+                MessageBox.Show($"Error creating JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Return the file path (optional)
+            return filePath;
         }
     }
 }
