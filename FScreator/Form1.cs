@@ -14,7 +14,7 @@ namespace FScreator
 {
     public partial class Form1 : Form
     {
-        private string version = "1.4.2";
+        private string version = "1.5.2";
         public Form1()
         {
             InitializeComponent();
