@@ -183,7 +183,6 @@ namespace FScreator
 "\"breakable\":" + breakable + ",\n" +
 "\"hidden\":" + hidden + ",\n" +
 "\"model\":\""+comboBox1.Text + "\",\n" +
-"\"inventory-size\":"+numericUpDown2.Value +"\",\n"+
 "\"draw-group\":" + draw_Droup + "";
             if (panel4.Visible == true)
             {
@@ -205,10 +204,6 @@ namespace FScreator
             if(SCRIPT.Visible == true)
             {
                 file += ",\n\"script-name\":\"" + textBox18.Text + "\"";
-            }
-            if(UI_ELEMENT.Visible == true)
-            {
-                file += ",\n\"ui-layout\":\"" + textBox19.Text + "\"";
             }
             file += "\n}";
             String hlp = Directory.GetCurrentDirectory();
@@ -265,18 +260,6 @@ namespace FScreator
             {
                 SCRIPT.Visible = true;
             }
-        }
-
-        private void checkBox12_CheckedChanged(object sender, EventArgs e)
-        {
-            if (UI_ELEMENT.Visible)
-            {
-                UI_ELEMENT.Visible = false;
-            }
-            else
-            {
-               UI_ELEMENT.Visible = true;
-            }    
         }
     }
 }

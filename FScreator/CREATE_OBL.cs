@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace FScreator
 {
     public partial class CREATE_OBL : Form
     {
+        public string savedir;
         public CREATE_OBL()
         {
             InitializeComponent();
@@ -51,6 +53,9 @@ namespace FScreator
             dir = System.IO.Path.Combine(name, textBox1.Text);
             Directory.CreateDirectory(dir);
             String[] IN = dir.Split('\\');
+
+            savedir = Path.Combine(name, textBox1.Text);
+
             //create blocks directory
             dir = System.IO.Path.Combine (name+"\\"+textBox1.Text,"blocks");
             Directory.CreateDirectory (dir);

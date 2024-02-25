@@ -211,6 +211,7 @@ namespace FScreator
             BuildButton.Click += BuildButton_Click;
 
             textBox5.Location = new System.Drawing.Point(10, heightTextBox.Bottom + 10);
+
             textBox6.Location = new System.Drawing.Point(10, BuildButton.Bottom + 10);
 
             // Add the TrackBar and textboxes to the panel
@@ -303,6 +304,9 @@ namespace FScreator
             // Add the new cube to the list of cubes
             cubes.Add(newCube);
 
+            // Output debugging information
+            Console.WriteLine($"New Cube Created - Center: ({newCube.Center.X}, {newCube.Center.Y}, {newCube.Center.Z}), Width: {newCube.Width}, Height: {newCube.Height}, Length: {newCube.Length}");
+
             // Set the new cube as the cubeToAdjust
             cubeToAdjust = newCube;
 
@@ -349,7 +353,6 @@ namespace FScreator
             // Update the position of the cubeToAdjust based on the slider value
             double newPosition = sliderValue / 10.0;
             cubeToAdjust.Center = new Point3D(0, newPosition, 0);
-            Console.WriteLine(newPosition);
 
             // Redraw the 3D scene
             helixViewport.InvalidateVisual();
@@ -524,58 +527,82 @@ namespace FScreator
 
         private string GenerateJson()
         {
-            Name2 = textBox6.Text;   // Да я задаю имя файлу через переменную а что такого?
+            string fileName = textBox6.Text;
 
             // Create a list to store cube information
-            List<List<double>> aabbsList = new List<List<double>>();
+            List<List<object>> aabbsList = GetAabbsList();
 
-            // Iterate through each cube and add its information to the list
+            // Create the JSON structure
+            var jsonData = new Dictionary<string, object>
+            {
+               { "texture", "def" },
+               { "model", "custom" },
+               { "model-primitives", new Dictionary<string, object>
+                  {
+                     { "aabbs", aabbsList }
+                  }
+               },
+               { "hitbox", new List<double> { 0.0, 0.0, 0.0, 1.0, 1.0, 1.0 } }
+            };
+
+            string filePath = SaveJsonToFile(fileName, jsonData);
+
+            return filePath;
+        }
+
+        private List<List<object>> GetAabbsList()
+        {
+            List<List<object>> aabbsList = new List<List<object>>();
+
             foreach (var cube in cubes)
             {
-                // Exclude bancube from the JSON data
                 if (cube != bancube)
                 {
-                    var aabb = new List<double>
-            {                                                  //  НЕ ПОПРОВЛЯТЬ СЛОМАЕШЬ!!!!!!!!!!!!!!
-                cube.Center.X, cube.Center.Y, cube.Center.Z,
-                cube.Width, cube.Height, cube.Length
-            };                                                  //  НЕ ПОПРОВЛЯТЬ СЛОМАЕШЬ!!!!!!!!!!!!!!
+
+                    // Debug statement to check cube information
+                    Console.WriteLine($"Cube Center: ({cube.Center.X}, {cube.Center.Y}, {cube.Center.Z}), Width: {cube.Width}, Height: {cube.Height}, Length: {cube.Length}");
+
+                    var aabb = new List<object>
+                    {
+                      cube.Center.Y, //0  2
+                      cube.Center.Z, //2  5
+                      cube.Center.X, //5  0
+                      cube.Width,
+                      cube.Height,
+                      cube.Length,
+                      "def",
+                      "def",
+                      "def",
+                      "def",
+                      "def",
+                      "def"
+                    };
 
                     aabbsList.Add(aabb);
                 }
             }
 
-            // Create the JSON structure
-            var jsonData = new
-            {
-                model = "custom",
-                modelPrimitives = new
-                {
-                    aabbs = aabbsList
-                }
-            };
+            return aabbsList;
+        }
 
-            // Get the current directory
-            string currentDirectory = Environment.CurrentDirectory;
-
-            // Combine the current directory with the file name
-            string filePath = Path.Combine(currentDirectory, Name2+".json");
+        private string SaveJsonToFile(string fileName, object jsonData)
+        {
+            string currentDir = Directory.GetCurrentDirectory();
+            string filePath = Path.Combine(currentDir, "Jsons", fileName + ".json");
 
             try
             {
-                // Write the JSON data to the file with new lines, spaces, and commas
-                File.WriteAllText(filePath, "{\n  \"texture\": \"def\",\n  \"model\": \"custom\",\n  \"model-primitives\": {\n    \"aabbs\": [\n" + string.Join(",\n", aabbsList.Select(aabb => $"      [ {string.Join(", ", aabb)} ]")) + "\n    ]\n  }\n}");
+                // Use Newtonsoft.Json for serialization
+                string jsonContent = JsonConvert.SerializeObject(jsonData, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(filePath, jsonContent);
 
-                // Provide feedback to the user
                 MessageBox.Show($"JSON file created successfully at {filePath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-                // Handle exceptions (e.g., file IO errors)
                 MessageBox.Show($"Error creating JSON file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Return the file path (optional)
             return filePath;
         }
     }

@@ -94,20 +94,12 @@
             this.SCRIPT = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.UI_ELEMENT = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.HITBOX.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.RGB.SuspendLayout();
             this.SCRIPT.SuspendLayout();
-            this.UI_ELEMENT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -687,7 +679,8 @@
             "block",
             "none",
             "X",
-            "aabb"});
+            "aabb",
+            "pane"});
             this.comboBox1.Location = new System.Drawing.Point(520, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(72, 21);
@@ -748,69 +741,12 @@
             this.textBox18.Size = new System.Drawing.Size(100, 20);
             this.textBox18.TabIndex = 0;
             // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(48, 223);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(68, 17);
-            this.checkBox12.TabIndex = 32;
-            this.checkBox12.Text = "ui-layout:";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
-            // 
-            // UI_ELEMENT
-            // 
-            this.UI_ELEMENT.Controls.Add(this.label21);
-            this.UI_ELEMENT.Controls.Add(this.textBox19);
-            this.UI_ELEMENT.Location = new System.Drawing.Point(274, 253);
-            this.UI_ELEMENT.Name = "UI_ELEMENT";
-            this.UI_ELEMENT.Size = new System.Drawing.Size(87, 49);
-            this.UI_ELEMENT.TabIndex = 33;
-            this.UI_ELEMENT.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(50, 13);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Имя xml:";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(3, 27);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(77, 20);
-            this.textBox19.TabIndex = 0;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(413, 324);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(61, 20);
-            this.numericUpDown2.TabIndex = 35;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(396, 340);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(101, 13);
-            this.label22.TabIndex = 36;
-            this.label22.Text = "размер инвентаря";
-            // 
             // CREATE_BLOCK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.UI_ELEMENT);
-            this.Controls.Add(this.checkBox12);
             this.Controls.Add(this.SCRIPT);
             this.Controls.Add(this.checkBox11);
             this.Controls.Add(this.panel1);
@@ -854,9 +790,6 @@
             this.RGB.PerformLayout();
             this.SCRIPT.ResumeLayout(false);
             this.SCRIPT.PerformLayout();
-            this.UI_ELEMENT.ResumeLayout(false);
-            this.UI_ELEMENT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,11 +862,5 @@
         private System.Windows.Forms.Panel SCRIPT;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.Panel UI_ELEMENT;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label22;
     }
 }
