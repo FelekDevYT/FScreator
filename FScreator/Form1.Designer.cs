@@ -28,41 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.Bbutton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.Createproject = new Guna.UI2.WinForms.Guna2Button();
+            this.Openbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.Packerbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.Exitbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Saccountbutton = new Guna.UI2.WinForms.Guna2Button();
+            this.Accountbutton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(126, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 62);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Создать блок";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -74,106 +63,19 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "@by Felek 2024";
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(234, 165);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 66);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Создать оболочку проекта";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(140, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Null Project";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 1);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Имя папки проекта для создания блоков и предметов";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(234, 99);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(104, 62);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Создать предмет";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(126, 165);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 66);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Редактировать Lua скрипт";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(234, 235);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 47);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Выйти";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(342, 165);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 66);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Редактировать JSON скрипт";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(92)))), ((int)(((byte)(3)))));
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Bbutton);
             this.panel1.Location = new System.Drawing.Point(0, 325);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(603, 44);
             this.panel1.TabIndex = 18;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(3, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 30);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Благодарности";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel2
             // 
@@ -184,86 +86,156 @@
             this.panel2.Size = new System.Drawing.Size(90, 33);
             this.panel2.TabIndex = 19;
             // 
-            // button7
+            // Bbutton
             // 
-            this.button7.Location = new System.Drawing.Point(342, 99);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 62);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Создать UI";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(234, 33);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(104, 62);
-            this.button11.TabIndex = 23;
-            this.button11.Text = "Редактор с подсветкой синтаксиса";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button10_Click);
+            this.Bbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Bbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Bbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Bbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Bbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Bbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Bbutton.ForeColor = System.Drawing.Color.Black;
+            this.Bbutton.Location = new System.Drawing.Point(5, 6);
+            this.Bbutton.Name = "Bbutton";
+            this.Bbutton.Size = new System.Drawing.Size(118, 30);
+            this.Bbutton.TabIndex = 32;
+            this.Bbutton.Text = "Благодарности";
+            this.Bbutton.Click += new System.EventHandler(this.Bbutton_Click);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(558, 304);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(550, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(38, 15);
             this.guna2HtmlLabel1.TabIndex = 24;
             this.guna2HtmlLabel1.Text = "in code";
             // 
-            // guna2Button1
+            // Createproject
             // 
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(120, 40);
-            this.guna2Button1.TabIndex = 25;
-            this.guna2Button1.Text = "Anonym";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.Createproject.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Createproject.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Createproject.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Createproject.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Createproject.FillColor = System.Drawing.Color.Gray;
+            this.Createproject.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Createproject.ForeColor = System.Drawing.Color.White;
+            this.Createproject.Location = new System.Drawing.Point(414, 274);
+            this.Createproject.Name = "Createproject";
+            this.Createproject.Size = new System.Drawing.Size(180, 45);
+            this.Createproject.TabIndex = 28;
+            this.Createproject.Text = "Создать Проект";
+            this.Createproject.Click += new System.EventHandler(this.Createproject_Click);
             // 
-            // guna2Button2
+            // Openbutton
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(3, 49);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(30, 31);
-            this.guna2Button2.TabIndex = 26;
-            this.guna2Button2.Visible = false;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.Openbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Openbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Openbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Openbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Openbutton.FillColor = System.Drawing.Color.Gray;
+            this.Openbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Openbutton.ForeColor = System.Drawing.Color.White;
+            this.Openbutton.Location = new System.Drawing.Point(414, 172);
+            this.Openbutton.Name = "Openbutton";
+            this.Openbutton.Size = new System.Drawing.Size(180, 45);
+            this.Openbutton.TabIndex = 29;
+            this.Openbutton.Text = "Открыть Проект";
             // 
-            // button9
+            // Packerbutton
             // 
-            this.button9.Location = new System.Drawing.Point(342, 33);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(104, 62);
-            this.button9.TabIndex = 27;
-            this.button9.Text = "Создать Model";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            this.Packerbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Packerbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Packerbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Packerbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Packerbutton.FillColor = System.Drawing.Color.Gray;
+            this.Packerbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Packerbutton.ForeColor = System.Drawing.Color.White;
+            this.Packerbutton.Location = new System.Drawing.Point(414, 223);
+            this.Packerbutton.Name = "Packerbutton";
+            this.Packerbutton.Size = new System.Drawing.Size(180, 45);
+            this.Packerbutton.TabIndex = 30;
+            this.Packerbutton.Text = "Пакер .FSCr";
+            this.Packerbutton.Click += new System.EventHandler(this.Packerbutton_Click);
+            // 
+            // Exitbutton
+            // 
+            this.Exitbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Exitbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Exitbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Exitbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Exitbutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Exitbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exitbutton.ForeColor = System.Drawing.Color.White;
+            this.Exitbutton.Location = new System.Drawing.Point(5, 276);
+            this.Exitbutton.Name = "Exitbutton";
+            this.Exitbutton.Size = new System.Drawing.Size(133, 43);
+            this.Exitbutton.TabIndex = 31;
+            this.Exitbutton.Text = "Выход";
+            this.Exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this.Createproject;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.Openbutton;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this.Packerbutton;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.TargetControl = this.Exitbutton;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.TargetControl = this.Bbutton;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.TargetControl = this.panel2;
+            // 
+            // Saccountbutton
+            // 
+            this.Saccountbutton.BackColor = System.Drawing.Color.Transparent;
+            this.Saccountbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Saccountbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Saccountbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Saccountbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Saccountbutton.FillColor = System.Drawing.Color.Transparent;
+            this.Saccountbutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Saccountbutton.ForeColor = System.Drawing.Color.White;
+            this.Saccountbutton.Image = ((System.Drawing.Image)(resources.GetObject("Saccountbutton.Image")));
+            this.Saccountbutton.ImageSize = new System.Drawing.Size(25, 25);
+            this.Saccountbutton.Location = new System.Drawing.Point(3, 49);
+            this.Saccountbutton.Name = "Saccountbutton";
+            this.Saccountbutton.Size = new System.Drawing.Size(30, 31);
+            this.Saccountbutton.TabIndex = 26;
+            this.Saccountbutton.Visible = false;
+            this.Saccountbutton.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // Accountbutton
+            // 
+            this.Accountbutton.BorderThickness = 1;
+            this.Accountbutton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Accountbutton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Accountbutton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Accountbutton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Accountbutton.FillColor = System.Drawing.Color.Transparent;
+            this.Accountbutton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Accountbutton.ForeColor = System.Drawing.Color.Black;
+            this.Accountbutton.Image = ((System.Drawing.Image)(resources.GetObject("Accountbutton.Image")));
+            this.Accountbutton.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.Accountbutton.ImageSize = new System.Drawing.Size(40, 40);
+            this.Accountbutton.Location = new System.Drawing.Point(3, 3);
+            this.Accountbutton.Name = "Accountbutton";
+            this.Accountbutton.Size = new System.Drawing.Size(120, 40);
+            this.Accountbutton.TabIndex = 25;
+            this.Accountbutton.Text = "Anonym";
+            this.Accountbutton.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Form1
             // 
@@ -271,26 +243,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.Exitbutton);
+            this.Controls.Add(this.Packerbutton);
+            this.Controls.Add(this.Openbutton);
+            this.Controls.Add(this.Createproject);
+            this.Controls.Add(this.Saccountbutton);
+            this.Controls.Add(this.Accountbutton);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FScreator 1.4.2 - главная";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -299,28 +266,26 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.Button button9;
+        private Guna.UI2.WinForms.Guna2Button Accountbutton;
+        private Guna.UI2.WinForms.Guna2Button Saccountbutton;
+        private Guna.UI2.WinForms.Guna2Button Createproject;
+        private Guna.UI2.WinForms.Guna2Button Openbutton;
+        private Guna.UI2.WinForms.Guna2Button Packerbutton;
+        private Guna.UI2.WinForms.Guna2Button Exitbutton;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Button Bbutton;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
     }
 }
 

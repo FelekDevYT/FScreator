@@ -42,7 +42,6 @@
             this.uIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пакFScToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ползунокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,12 +101,11 @@
             this.uIToolStripMenuItem,
             this.xmlToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.пакFScToolStripMenuItem,
             this.добавитьToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 16);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(553, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,13 +189,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.aboutToolStripMenuItem.Text = "О Редакторе";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // пакFScToolStripMenuItem
-            // 
-            this.пакFScToolStripMenuItem.Name = "пакFScToolStripMenuItem";
-            this.пакFScToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.пакFScToolStripMenuItem.Text = "Пак .FSСr";
-            this.пакFScToolStripMenuItem.Click += new System.EventHandler(this.пакFScToolStripMenuItem_Click);
             // 
             // добавитьToolStripMenuItem
             // 
@@ -554,7 +545,6 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.ToolStripMenuItem пакFScToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изображениеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem кнопкаToolStripMenuItem;

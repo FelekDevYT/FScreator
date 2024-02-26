@@ -19,9 +19,9 @@ namespace FScreator
         {
             InitializeComponent();
             checkif();
-            if (guna2Button1.Text != "Anonym")
+            if (Accountbutton.Text != "Anonym")
             {
-                guna2Button2.Show();
+                Saccountbutton.Show();
             }
 
             this.Text = "FScreator " + version + " - Главная";
@@ -29,15 +29,11 @@ namespace FScreator
 
 
             ToolTip t = new ToolTip();
-            t.SetToolTip(button1, "для создания блока в проекте напишите имя проекта в главном окне в имени проекта");
-            t.SetToolTip(button2, "Создать скрипт для блока/предмета");
-            t.SetToolTip(button8, "Создать папку с начальными файлами");
-            t.SetToolTip(button5, "для создания предмета в проекте напишите в именни проекта");
-            t.SetToolTip(button11, "для создания любого кода");
-            t.SetToolTip(button7, "для создания интерфейса блоком/предметам");
-            t.SetToolTip(button6, "а почему нет?");
-            t.SetToolTip(button4, "для создания кода для оболочки");
-            t.SetToolTip(button3, "Выход :(");
+            t.SetToolTip(Packerbutton, "Для запаковки файлов в .FSCr формат");
+            t.SetToolTip(Createproject, "Создать проект");
+            t.SetToolTip(Openbutton, "Открыть проект .FSCr");
+            t.SetToolTip(Exitbutton, "Выйти :(");
+            t.SetToolTip(Bbutton, "Можно но можно!");
         }
         public Color color = Color.FromArgb(255, 128, 0);
 
@@ -46,87 +42,15 @@ namespace FScreator
             BackColor = color;
         }
         public String DRD;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CREATE_BLOCK.f = textBox1.Text;
-            CREATE_BLOCK cr = new CREATE_BLOCK();
-            cr.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Lua_CODER cr = new Lua_CODER();
-            cr.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            JSON js = new JSON();
-            js.ShowDialog();
-        }
-        String name;
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            CREATE_OBL obl = new CREATE_OBL();
-            obl.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            CREATE_ITEM.f = textBox1.Text;
-            CREATE_ITEM cr  = new CREATE_ITEM();
-            cr.ShowDialog();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            Lua_CODER l = new Lua_CODER();
-            l.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            JSON j = new JSON();
-            j.ShowDialog();
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Спасибо Domaja за ВСЕ!!!", "Благодарности", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            CREATE_UI UI = new CREATE_UI();
-            UI.ShowDialog();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            XML_coder xm = new XML_coder();
-            xm.ShowDialog();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            КУВФСЕ r = new КУВФСЕ();
-            r.ShowDialog();
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if(guna2Button1.Text == "Anonym")
+            if(Accountbutton.Text == "Anonym")
             {
                 reglog reglog = new reglog();
                 reglog.ShowDialog();
@@ -148,12 +72,12 @@ namespace FScreator
 
                     if (fileContent == "")
                     {
-                        guna2Button2.Hide();
+                        Saccountbutton.Hide();
                     }
                     else
                     {
-                        guna2Button1.Text = fileContent;
-                        guna2Button2.Show();
+                        Accountbutton.Text = fileContent;
+                        Saccountbutton.Show();
                     }
                 }
                 else
@@ -174,10 +98,36 @@ namespace FScreator
             checkif();
         }
 
-        private void button9_Click_1(object sender, EventArgs e)
+        private void Exitbutton_Click(object sender, EventArgs e)
         {
-            _3dmodel Dmodel = new _3dmodel();
-            Dmodel.ShowDialog();
+            this.Close();
+        }
+
+        private void Createproject_Click(object sender, EventArgs e)
+        {
+            CreateProject createproject = new CreateProject();
+
+            this.Hide();
+
+            createproject.ShowDialog();
+
+            this.Show();
+        }
+
+        private void Packerbutton_Click(object sender, EventArgs e)
+        {
+            PunP punp = new PunP();
+
+            this.Hide();
+            
+            punp.ShowDialog();
+
+            this.Show();
+        }
+
+        private void Bbutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Спасибо Domaja за ВСЕ!!!", "Благодарности", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
