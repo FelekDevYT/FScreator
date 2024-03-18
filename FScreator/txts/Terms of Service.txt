@@ -1,7 +1,9 @@
+© (ALL APP/NETWORK/SERVICE TERMS) ©
+
 Terms of Service:
 
 
-1. Do not Copy this app Copyrighted
+1. Do not Copy this app Copyrighted © 
 
 2. Don't re-image the file to project
 
@@ -15,7 +17,7 @@ Terms of Service:
 
 7. Denial of responsibility
 
-8. Better-World and Felek_ Can ban or block your account temporarily if you trying to harm
+8. Better-World Can ban or block your account temporarily if you trying to harm
 
 9. Cheats is banned if it's doesn't a modification!
 
@@ -23,18 +25,22 @@ Terms of Service:
 
 11. DDOS(DOS) attack has forbidden!
 
-12. Better-World and Felek_ employees can decide punishment
+12. Better-World and employees can decide punishment
 
 13. Don't change Terms of Service.txt
 
-14. Only 1 Account Of One Computer!
+14. Only 1 Open app in 1 Computer!
+
+15. Any broken rule has consequences!
+
+16. Better-World has a Original Terms of Service File
 
 
 
 Условия использования:
 
 
-1. Не копируйте это приложение, защищенное авторскими правами.
+1. Не копируйте это приложение, защищенное авторскими правами © .
 
 2. Не перерисовывайте файл в проект.
 
@@ -48,7 +54,7 @@ Terms of Service:
 
 7. Отказ от ответственности
 
-8. Better-World и Felek_ может временно заблокировать или заблокировать вашу учетную запись, если вы попытаетесь причинить вред
+8. Better-World может временно заблокировать или заблокировать вашу учетную запись, если вы попытаетесь причинить вред
 
 9. Читы запрещены, если они не являются модификацией!
 
@@ -56,11 +62,118 @@ Terms of Service:
 
 11. DDOS(DOS)-атака запрещена!
 
-12. Сотрудники Better-World и Felek_ могут решать накозание
+12. Сотрудники Better-World могут решать накозание
 
 13. Не изменять файл Terms of Service.txt
 
-14. 1 акаунт на 1 компютер!!
+14. 1 Открытое приложения на 1 компютере!!
+
+15. Любое нарущеное правило имеет последствия!
+
+16. Оригинальный Файл Terms of Service всегда есть у Better-World
 
 
-by Better-World and Felek_
+При нарушений правил:
+
+DDOS(DOS)-Атака = 1.0
+Изменил файл Terms of Service = 1.1
+Использовал читы = 1.1, 1.9
+Мультиприложение = 1.1, 1.9, 1.6
+Нашол баг = 2.0
+Импользовал Баг Для Нечесново Использования = 1.5, 1.2
+Спам в Поддержку = 1.8, 1.5
+
+
+
+
+Список Последствий:
+
+
+1.0:
+Запрет использования Приложения/Программы/Сервиса
+
+1.1:
+Бан по Айпи в Приложение/Программу/Сервис
+
+1.2:
+Удаление учётной записи с Приложения/Программы/Сервиса
+
+1.3:
+Бан учётной записи на всегда в Приложений/Программе/Сервисе
+
+1.4:
+Ограниченный доступ к Приложению/Программе/Сервису
+
+1.5:
+Бан на время от 5 минут до 31 дня в Приложений/Программе/Сервисе
+
+1.6:
+Удаление Всех Данных с Приложения/Программы/Сервиса
+
+1.7:
+Запрет обновлений Приложения/Программы/Сервиса
+
+1.8:
+Запрет обращения в Поддержку в Приложений/Программе/Сервисе
+
+1.9:
+Запрет создания учётной записи в Приложений/Программе/Сервисе
+
+2.0:
+Вознагрождение в Приложений/Программе/Сервисе
+
+
+
+
+In case of violation of the rules:
+
+DDOS(DOS)-Attack = 1.0
+Changed the file Terms of Service = 1.1
+Used cheats = 1.1, 1.9
+Multi-app = 1.1, 1.9, 1.6
+Found a bug = 2.0
+Used Bug For Nechesnovo Use = 1.5, 1.2
+Spam to Support = 1.8, 1.5
+
+
+
+
+List of Consequences:
+
+
+1.0:
+Prohibition of using the Application/Program/Service
+
+1.1:
+IP ban in Application/Program/Service
+
+1.2:
+Removing an account from the Application/Program/Service
+
+1.3:
+Ban account forever in Applications/Programs/Services
+
+1.4:
+Limited access to the Application/Program/Service
+
+1.5:
+Ban for a period from 5 minutes to 31 days in Applications/Program/Service
+
+1.6:
+Removing All Data from the Application/Program/Service
+
+1.7:
+Prohibition of Application/Program/Service updates
+
+1.8:
+Prohibition of contacting Support in Applications/Programs/Services
+
+1.9:
+Prohibition of creating an account in Applications/Programs/Services
+
+2.0:
+Reward in Application/Program/Service
+
+
+
+By Better-World
